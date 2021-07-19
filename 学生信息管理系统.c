@@ -1,7 +1,7 @@
 /*
  * @Author: 6371.393
  * @Date: 2021-06-28 09:58:56
- * @LastEditTime: 2021-06-29 09:51:37
+ * @LastEditTime: 2021-07-19 17:31:24
  * @LastEditors: Please set LastEditors
  * @Description: vs code
  * @FilePath: \cworkplace\学生信息管理系统.c
@@ -24,6 +24,7 @@ void displayStu();
 void saveStu();
 void menu();
 void help();
+void log();
 int flushStu();
 
 //结构体保存学生信息
@@ -38,12 +39,78 @@ struct student {
 //主函数
 int main()
 {
+	log();
 	while (k)
 	{
 		menu();
 	}
 	system("pause");
 	return 0;
+}
+
+//登录函数
+void log()
+{
+	char name[10];
+	char word[10];
+	char username[10] = "ania0_art"; 
+	char password[10] = "6371";
+	int n;
+
+	printf("\n\n");
+	printf("\t*******************************\n");
+	printf("\t********* 用户登录系统 *********\n");
+	printf("\t*******************************\n");
+	printf("\n\n");
+
+	printf("\tPlease enter username.\n");	
+	printf("\tusername:");
+	scanf("%s",name);
+	printf("\n");
+	
+		if( strcmp(username , name) == 0)
+		{
+			printf("\tPlease enter password.\n");
+			printf("\tpassword:");
+			scanf("%s",word);
+			for(n = 0; n < 5; n++)
+			{
+				if( strcmp( password , word) == 0 )
+				{				
+					printf("\n\n");
+					printf("\t*******************************\n");
+					printf("\t********* 欢迎用户！ *********\n");
+					printf("\t*******************************\n");
+					printf("\n\n");
+					break;
+				}
+				else
+				{
+					printf("\tPlease enter again!\n");
+					printf("\tpassword:");
+					scanf("%s",word);
+					if( strcmp( password , word) == 0 )
+					{				
+						printf("\n\n");
+						printf("\t*******************************\n");
+						printf("\t********* 欢迎用户！ *********\n");
+						printf("\t*******************************\n");
+						printf("\n\n");
+						break;
+					}
+				}
+			}	
+		}
+		else if( strlen( name ) < 6)
+		{	
+			printf("\tLess input!\n");
+			exit(0);
+		}
+		else if( strcmp(username , name) != 0)
+		{	
+			printf("\tUsername error! Please enter again!\n");
+			exit(0);
+		}
 }
 
 //系统帮助函数
