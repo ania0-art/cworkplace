@@ -1,7 +1,7 @@
 /*
  * @Author: 6371.393
  * @Date: 2021-06-28 09:58:56
- * @LastEditTime: 2021-07-19 17:31:24
+ * @LastEditTime: 2021-07-20 16:42:38
  * @LastEditors: Please set LastEditors
  * @Description: vs code
  * @FilePath: \cworkplace\学生信息管理系统.c
@@ -48,7 +48,7 @@ int main()
 	return 0;
 }
 
-//登录函数
+//登录函数，提前与系统匹配
 void log()
 {
 	char name[10];
