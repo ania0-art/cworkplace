@@ -132,11 +132,9 @@ void main()
 
     } while (have == 2 || front != NULL);
 
-    printf("结果：业务员等待时间%d\n客户平均等待时间%f\n", dwait,
+    printf("结果：业务员空闲时间%d\n客户平均等待时间%.2f\n", dwait,(double)wait / count);
 
-           (double)wait / count);
-
-    printf("模拟总时间：%d，\n客户人数：%d,\n总等待时间：%d\n", clock,count, wait);
+    printf("模拟总时间：%d，\n客户人数：%d,\n总等待时间：%d。\n", clock,count, wait);
 
     getchar();
 }
