@@ -131,10 +131,11 @@ void main()
         clock = finish; /* 时钟推进到当前客户办理结束时间*/
 
     } while (have == 2 || front != NULL);
+    printf("2020212373 王俊枭\n");
 
     printf("结果：业务员空闲时间%d\n客户平均等待时间%.2f\n", dwait,(double)wait / count);
 
-    printf("模拟总时间：%d，\n客户人数：%d,\n总等待时间：%d。\n", clock,count, wait);
+    printf("等待总时间：%d，\n客户人数：%d,\n总等待时间：%d。\n", clock,count, wait);
 
     getchar();
 }
